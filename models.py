@@ -54,7 +54,7 @@ class Car(db.Model):
     model = db.Column(db.String(50), nullable=False)
     year = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(50), nullable=False)
-    accident_on_record = db.Column(db.Boolean, default=False)
+    accident_on_record = db.Column(db.String(50), default=False)
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable=False)
     

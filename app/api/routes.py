@@ -15,7 +15,7 @@ def get_cars(current_user_token):
     return jsonify(response)
 
 
-@api.route('/cars/<id>')
+@api.route('/cars/<id>' )
 @token_required
 def get_car(current_user_token, id):
     car = Car.query.get(id)
